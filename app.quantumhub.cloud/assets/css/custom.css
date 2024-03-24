@@ -1,0 +1,153 @@
+* {
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(140 152 164 / 30%);
+}
+
+.jconfirm-box {
+    width: unset !important;
+}
+
+/*! CSS Used from: https://lootbot.xyz/_next/static/css/fee6d582be53f757.css */
+
+.raindrop {
+    position: fixed;
+    inset: 0;
+    z-index: -50;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.raindrop .raindrop-item {
+    position: absolute;
+    top: -3rem;
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    animation: raindrop 25s linear infinite;
+}
+
+.raindrop .raindrop-item-1 {
+    left: 13%;
+    animation-delay: 0s;
+}
+
+.raindrop .raindrop-item-2 {
+    left: 10%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.raindrop .raindrop-item-3 {
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.raindrop .raindrop-item-4 {
+    left: 40%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.raindrop .raindrop-item-5 {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.raindrop .raindrop-item-6 {
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.raindrop .raindrop-item-7 {
+    left: 35%;
+    animation-delay: 7s;
+}
+
+.raindrop .raindrop-item-8 {
+    left: 50%;
+    animation-delay: 9s;
+    animation-duration: 40s;
+}
+
+.raindrop .raindrop-item-9 {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 28s;
+}
+
+.raindrop .raindrop-item-10 {
+    left: 85%;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.raindrop .raindrop-item-11 {
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.raindrop .raindrop-item-12 {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 26s;
+}
+
+.raindrop .raindrop-item-13 {
+    left: 55%;
+    animation-delay: 31s;
+}
+
+.raindrop .raindrop-item-14 {
+    left: 40%;
+    animation-delay: 0s;
+    animation-duration: 37s;
+}
+
+.raindrop .raindrop-item-15 {
+    left: 65%;
+    animation-delay: 0s;
+}
+
+.raindrop .raindrop-item-16 {
+    left: 75%;
+    animation-delay: 12s;
+}
+
+.raindrop .raindrop-item-17 {
+    left: 35%;
+    animation-delay: 27s;
+}
+
+.raindrop .raindrop-item-18 {
+    left: 50%;
+    animation-delay: 15s;
+    animation-duration: 20s;
+}
+
+.raindrop .raindrop-item-19 {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+/*! CSS Used keyframes */
+
+@keyframes raindrop {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: .5;
+    }
+    to {
+        transform: translateY(1000px) rotate(2turn);
+        opacity: 0;
+    }
+}

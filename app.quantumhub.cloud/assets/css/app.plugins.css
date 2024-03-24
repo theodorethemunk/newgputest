@@ -1,0 +1,1037 @@
+/**!
+* (c) 2017 atomiks (Tippy) & FezVrasta (Popper)
+* @version 0.16.1
+* @license MIT
+*/
+
+.tippy-touch {
+    /* cursor:pointer!important */
+}
+
+.tippy-notransition {
+    -webkit-transition: none !important;
+    transition: none !important
+}
+
+.tippy-popper {
+    z-index: 9999;
+    max-width: 400px;
+    -webkit-perspective: 800px;
+    perspective: 800px
+}
+
+.tippy-popper.html-template {
+    max-width: 96%;
+    max-width: calc(100% - 20px)
+}
+
+.tippy-popper[x-placement^=top] [x-arrow] {
+    position: absolute;
+    bottom: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid #212121;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-small {
+    bottom: -5px;
+    border-top: 5px solid #212121;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=top] [x-arrow].arrow-big {
+    bottom: -9px;
+    border-top: 9px solid #212121;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=top] [x-circle] {
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.tippy-popper[x-placement^=top] [x-circle].enter {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=top] [x-circle].leave {
+    -webkit-transform: scale(.45) translate(-50%, -100%);
+    transform: scale(.45) translate(-50%, -100%);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.light-theme [x-circle] {
+    background-color: #fff
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.light-theme [x-arrow] {
+    border-top: 7px solid #fff;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.light-theme [x-arrow].arrow-small {
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.light-theme [x-arrow].arrow-big {
+    border-top: 9px solid #fff;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.transparent-theme [x-circle] {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.transparent-theme [x-arrow] {
+    border-top: 7px solid rgba(0, 0, 0, .7);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.transparent-theme [x-arrow].arrow-small {
+    border-top: 5px solid rgba(0, 0, 0, .7);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=top] .tippy-tooltip.transparent-theme [x-arrow].arrow-big {
+    border-top: 9px solid rgba(0, 0, 0, .7);
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=top] [data-animation=perspective] {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom
+}
+
+.tippy-popper[x-placement^=top] [data-animation=perspective].enter {
+    -webkit-transform: translateY(-10px) rotateX(0);
+    transform: translateY(-10px) rotateX(0);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=top] [data-animation=perspective].leave {
+    -webkit-transform: translateY(0) rotateX(90deg);
+    transform: translateY(0) rotateX(90deg);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=top] [data-animation=fade].enter {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=top] [data-animation=fade].leave {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=top] [data-animation=shift].enter {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=top] [data-animation=shift].leave {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=top] [data-animation=scale].enter {
+    -webkit-transform: translateY(-10px) scale(1);
+    transform: translateY(-10px) scale(1);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=top] [data-animation=scale].leave {
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=bottom] [x-arrow] {
+    position: absolute;
+    top: -7px;
+    width: 0;
+    height: 0;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #212121;
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] [x-arrow].arrow-small {
+    top: -5px;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #212121;
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] [x-arrow].arrow-big {
+    top: -9px;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #212121;
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] [x-circle] {
+    -webkit-transform-origin: 0 -100%;
+    transform-origin: 0 -100%
+}
+
+.tippy-popper[x-placement^=bottom] [x-circle].enter {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=bottom] [x-circle].leave {
+    -webkit-transform: scale(.45) translate(-50%, 5%);
+    transform: scale(.45) translate(-50%, 5%);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.light-theme [x-circle] {
+    background-color: #fff
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.light-theme [x-arrow] {
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.light-theme [x-arrow].arrow-small {
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.light-theme [x-arrow].arrow-big {
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.transparent-theme [x-circle] {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.transparent-theme [x-arrow] {
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(0, 0, 0, .7);
+    border-left: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.transparent-theme [x-arrow].arrow-small {
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(0, 0, 0, .7);
+    border-left: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] .tippy-tooltip.transparent-theme [x-arrow].arrow-big {
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgba(0, 0, 0, .7);
+    border-left: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=perspective] {
+    -webkit-transform-origin: top;
+    transform-origin: top
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=perspective].enter {
+    -webkit-transform: translateY(10px) rotateX(0);
+    transform: translateY(10px) rotateX(0);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=perspective].leave {
+    -webkit-transform: translateY(0) rotateX(-90deg);
+    transform: translateY(0) rotateX(-90deg);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=fade].enter {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=fade].leave {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=shift].enter {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=shift].leave {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=scale].enter {
+    -webkit-transform: translateY(10px) scale(1);
+    transform: translateY(10px) scale(1);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=bottom] [data-animation=scale].leave {
+    -webkit-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=left] [x-arrow] {
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #212121
+}
+
+.tippy-popper[x-placement^=left] [x-arrow].arrow-small {
+    top: 50%;
+    right: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #212121
+}
+
+.tippy-popper[x-placement^=left] [x-arrow].arrow-big {
+    top: 50%;
+    right: -9px;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #212121
+}
+
+.tippy-popper[x-placement^=left] [x-circle] {
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0
+}
+
+.tippy-popper[x-placement^=left] [x-circle].enter {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=left] [x-circle].leave {
+    -webkit-transform: scale(.45) translate(-50%, -50%);
+    transform: scale(.45) translate(-50%, -50%);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.light-theme [x-circle] {
+    background-color: #fff
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.light-theme [x-arrow] {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #fff
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.light-theme [x-arrow].arrow-small {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.light-theme [x-arrow].arrow-big {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #fff
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.transparent-theme [x-circle] {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.transparent-theme [x-arrow] {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.transparent-theme [x-arrow].arrow-small {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=left] .tippy-tooltip.transparent-theme [x-arrow].arrow-big {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=left] [data-animation=perspective] {
+    -webkit-transform-origin: right;
+    transform-origin: right
+}
+
+.tippy-popper[x-placement^=left] [data-animation=perspective].enter {
+    -webkit-transform: translateX(-10px) rotateY(0);
+    transform: translateX(-10px) rotateY(0);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=left] [data-animation=perspective].leave {
+    -webkit-transform: translateX(0) rotateY(-90deg);
+    transform: translateX(0) rotateY(-90deg);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=left] [data-animation=fade].enter {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=left] [data-animation=fade].leave {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=left] [data-animation=shift].enter {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=left] [data-animation=shift].leave {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=left] [data-animation=scale].enter {
+    -webkit-transform: translateX(-10px) scale(1);
+    transform: translateX(-10px) scale(1);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=left] [data-animation=scale].leave {
+    -webkit-transform: translateX(0) scale(0);
+    transform: translateX(0) scale(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=right] [x-arrow] {
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #212121;
+    border-bottom: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=right] [x-arrow].arrow-small {
+    top: 50%;
+    left: -5px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #212121;
+    border-bottom: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=right] [x-arrow].arrow-big {
+    top: 50%;
+    left: -9px;
+    border-top: 9px solid transparent;
+    border-right: 9px solid #212121;
+    border-bottom: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=right] [x-circle] {
+    -webkit-transform-origin: -50% 0;
+    transform-origin: -50% 0
+}
+
+.tippy-popper[x-placement^=right] [x-circle].enter {
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=right] [x-circle].leave {
+    -webkit-transform: scale(.45) translate(-50%, -50%);
+    transform: scale(.45) translate(-50%, -50%);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.light-theme [x-circle] {
+    background-color: #fff
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.light-theme [x-arrow] {
+    border-top: 7px solid transparent;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.light-theme [x-arrow].arrow-small {
+    border-top: 5px solid transparent;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.light-theme [x-arrow].arrow-big {
+    border-top: 9px solid transparent;
+    border-right: 9px solid #fff;
+    border-bottom: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.transparent-theme [x-circle] {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.transparent-theme [x-arrow] {
+    border-top: 7px solid transparent;
+    border-right: 7px solid rgba(0, 0, 0, .7);
+    border-bottom: 7px solid transparent
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.transparent-theme [x-arrow].arrow-small {
+    border-top: 5px solid transparent;
+    border-right: 5px solid rgba(0, 0, 0, .7);
+    border-bottom: 5px solid transparent
+}
+
+.tippy-popper[x-placement^=right] .tippy-tooltip.transparent-theme [x-arrow].arrow-big {
+    border-top: 9px solid transparent;
+    border-right: 9px solid rgba(0, 0, 0, .7);
+    border-bottom: 9px solid transparent
+}
+
+.tippy-popper[x-placement^=right] [data-animation=perspective] {
+    -webkit-transform-origin: left;
+    transform-origin: left
+}
+
+.tippy-popper[x-placement^=right] [data-animation=perspective].enter {
+    -webkit-transform: translateX(10px) rotateY(0);
+    transform: translateX(10px) rotateY(0);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=right] [data-animation=perspective].leave {
+    -webkit-transform: translateX(0) rotateY(90deg);
+    transform: translateX(0) rotateY(90deg);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=right] [data-animation=fade].enter {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=right] [data-animation=fade].leave {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=right] [data-animation=shift].enter {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=right] [data-animation=shift].leave {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0
+}
+
+.tippy-popper[x-placement^=right] [data-animation=scale].enter {
+    -webkit-transform: translateX(10px) scale(1);
+    transform: translateX(10px) scale(1);
+    opacity: 1
+}
+
+.tippy-popper[x-placement^=right] [data-animation=scale].leave {
+    -webkit-transform: translateX(0) scale(0);
+    transform: translateX(0) scale(0);
+    opacity: 0
+}
+
+.tippy-popper [x-circle] {
+    background-color: #fff
+}
+
+.tippy-popper[data-animatefill] {
+    background-color: transparent
+}
+
+.tippy-popper [x-arrow] {
+    position: absolute;
+    width: 0;
+    height: 0
+}
+
+.tippy-popper .tippy-tooltip.transparent-theme {
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tippy-popper .tippy-tooltip.transparent-theme[data-animatefill] {
+    background-color: transparent
+}
+
+.tippy-popper .tippy-tooltip.light-theme {
+    color: #203d5d;
+    background-color: #fff;
+    box-shadow: 0 4px 20px 4px rgba(0, 20, 60, .1), 0 4px 80px -8px rgba(0, 20, 60, .2)
+}
+
+.tippy-popper .tippy-tooltip.light-theme[data-animatefill] {
+    background-color: transparent
+}
+
+.tippy-tooltip {
+    position: relative;
+    padding: .4rem .8rem;
+    font-size: .95rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #212121;
+    will-change: transform
+}
+
+.tippy-tooltip--small {
+    padding: .25rem .5rem;
+    font-size: .8rem
+}
+
+.tippy-tooltip--big {
+    padding: .6rem 1.2rem;
+    font-size: 1.2rem
+}
+
+.tippy-tooltip[data-animatefill] {
+    overflow: hidden;
+    background-color: transparent
+}
+
+.tippy-tooltip[data-inertia] {
+    -webkit-transition-timing-function: cubic-bezier(.53, 1, .36, .85);
+    transition-timing-function: cubic-bezier(.53, 2, .36, .85)
+}
+
+.tippy-tooltip [x-circle] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 120%;
+    width: calc(100% + 2rem);
+    overflow: hidden;
+    -webkit-transition: all ease-out;
+    transition: all ease-out;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #212121;
+    will-change: transform
+}
+
+.tippy-tooltip [x-circle]:before {
+    float: left;
+    padding-top: 75%;
+    content: ""
+}
+
+@media (max-width:450px) {
+    .tippy-popper {
+        max-width: 96%;
+        max-width: calc(100% - 20px)
+    }
+}
+
+/*!
+ * jquery-confirm v3.0.1 (http://craftpip.github.io/jquery-confirm/)
+ * Licensed under MIT (https://github.com/craftpip/jquery-confirm/blob/master/LICENSE)
+ * Note: removed unnecessary styles
+ */
+
+.jconfirm,
+.jconfirm .jconfirm-bg,
+.jconfirm .jconfirm-scrollpane {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons {
+    float: right
+}
+
+body[class*=jconfirm-no-scroll-] {
+    overflow: hidden !important
+}
+
+.jconfirm {
+    z-index: 99999999;
+    overflow: hidden;
+    font-family: inherit
+}
+
+.jconfirm .jconfirm-bg {
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s
+}
+
+.jconfirm .jconfirm-bg.jconfirm-bg-h {
+    opacity: 0 !important
+}
+
+.jconfirm .jconfirm-scrollpane {
+    overflow-y: auto;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-perspective-origin: center;
+    perspective-origin: center
+}
+
+.jconfirm .jconfirm-box {
+    position: relative;
+    padding: 15px 15px 0;
+    overflow: hidden;
+    border-radius: 4px;
+    outline: 0;
+    background: #fff
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+.jconfirm .jconfirm-box.loading {
+    height: 120px
+}
+
+.jconfirm .jconfirm-box.loading:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    border-radius: 10px;
+    background: #fff
+}
+
+.jconfirm .jconfirm-box.loading:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    content: "";
+    -webkit-animation: jconfirm-spin 1s infinite linear;
+    animation: jconfirm-spin 1s infinite linear;
+    opacity: .6;
+    border: 3px solid transparent;
+    border-bottom-color: #1e90ff;
+    border-radius: 50%
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    font-size: 27px !important;
+    line-height: 14px !important;
+    cursor: pointer;
+    -webkit-transition: opacity .3s ease-in;
+    transition: opacity .3s ease-in;
+    text-align: center;
+    opacity: .6
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon:empty {
+    display: none
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .fa,
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .glyphicon,
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .zmdi {
+    font-size: 16px
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon:hover {
+    opacity: 1
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c {
+    display: block;
+    font-size: 22px;
+    line-height: 20px
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c {
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-right: 8px;
+    font-size: inherit;
+    vertical-align: middle
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c i {
+    vertical-align: middle
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c:empty {
+    display: none
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title {
+    display: inline-block;
+    padding-bottom: 15px;
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: middle
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title:empty {
+    display: none
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+    -webkit-transition: height .4s ease-in;
+    transition: height .4s ease-in
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content img {
+    height: auto;
+    max-width: 100%
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content:empty {
+    display: none
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons {
+    padding-bottom: 11px
+}
+
+.jconfirm .jconfirm-clear {
+    clear: both
+}
+
+.jconfirm.jconfirm-rtl {
+    direction: rtl
+}
+
+.jconfirm.jconfirm-rtl div.jconfirm-closeIcon {
+    right: auto;
+    left: 5px
+}
+
+.jconfirm.jconfirm-light .jconfirm-bg,
+.jconfirm.jconfirm-white .jconfirm-bg {
+    opacity: .2;
+    background-color: #444
+}
+
+.jconfirm.jconfirm-light .jconfirm-box,
+.jconfirm.jconfirm-white .jconfirm-box {
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2)
+}
+
+.jconfirm.jconfirm-black .jconfirm-bg,
+.jconfirm.jconfirm-dark .jconfirm-bg {
+    opacity: .4;
+    background-color: #2f4f4f
+}
+
+.jconfirm.jconfirm-black .jconfirm-box,
+.jconfirm.jconfirm-dark .jconfirm-box {
+    color: #fff;
+    border-radius: 5px;
+    background: #444;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2)
+}
+
+.jconfirm .jconfirm-box.hilight.jconfirm-hilight-shake {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+    animation: shake .82s cubic-bezier(.36, .07, .19, .97) both
+}
+
+.jconfirm .jconfirm-box.hilight.jconfirm-hilight-glow {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: glow .82s cubic-bezier(.36, .07, .19, .97) both;
+    animation: glow .82s cubic-bezier(.36, .07, .19, .97) both
+}
+
+@-webkit-keyframes shake {
+    10%,
+    90% {
+        -webkit-transform: translate3d(-2px, 0, 0);
+        transform: translate3d(-2px, 0, 0)
+    }
+    20%,
+    80% {
+        -webkit-transform: translate3d(4px, 0, 0);
+        transform: translate3d(4px, 0, 0)
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translate3d(-8px, 0, 0);
+        transform: translate3d(-8px, 0, 0)
+    }
+    40%,
+    60% {
+        -webkit-transform: translate3d(8px, 0, 0);
+        transform: translate3d(8px, 0, 0)
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        -webkit-transform: translate3d(-2px, 0, 0);
+        transform: translate3d(-2px, 0, 0)
+    }
+    20%,
+    80% {
+        -webkit-transform: translate3d(4px, 0, 0);
+        transform: translate3d(4px, 0, 0)
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translate3d(-8px, 0, 0);
+        transform: translate3d(-8px, 0, 0)
+    }
+    40%,
+    60% {
+        -webkit-transform: translate3d(8px, 0, 0);
+        transform: translate3d(8px, 0, 0)
+    }
+}
+
+@-webkit-keyframes glow {
+    0%,
+    100% {
+        box-shadow: 0 0 3px red
+    }
+    50% {
+        box-shadow: 0 0 30px red
+    }
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        box-shadow: 0 0 3px red
+    }
+    50% {
+        box-shadow: 0 0 30px red
+    }
+}
+
+.jconfirm {
+    -webkit-perspective: 400px;
+    perspective: 400px
+}
+
+.jconfirm .jconfirm-box {
+    -webkit-transition-property: all;
+    transition-property: all;
+    opacity: 1
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-opacity {
+    opacity: 0
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-none {
+    visibility: hidden
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-bg {
+    background-color: rgba(255, 255, 255, .95)
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box {
+    background-color: transparent
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-closeIcon {
+    color: #000
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-title-c {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-title-c>* {
+    padding-bottom: 15px
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-content-pane {
+    margin-bottom: 15px
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-content {
+    text-align: center
+}
